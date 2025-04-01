@@ -13,6 +13,7 @@ import plotly.express as px
 import pandas as pd
 import numpy as np
 import logging
+import os
 
 # configure logging
 logging.basicConfig(
@@ -31,6 +32,7 @@ logger = logging.getLogger('app')
 
 # initialize the dash app
 app = dash.Dash(__name__)
+server = app.server
 
 # add css styles
 app.index_string = '''
@@ -386,5 +388,6 @@ def update_historical_summary(dummy):
 
 
 if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 8050))
     logger.info("Starting the Dash application...")
-    app.run_server(debug=True)
+    app.run_server(debug=False, host='0.0.0.0', port=port)
