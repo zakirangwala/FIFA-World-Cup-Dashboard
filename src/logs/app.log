@@ -287,3 +287,16 @@
 2025-04-01 19:19:51,487 - app - INFO - Map updated successfully
 2025-04-01 19:19:51,487 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:51] "POST /_dash-update-component HTTP/1.1" 200 -
 2025-04-01 19:20:34,260 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:20:34] "GET /_reload-hash HTTP/1.1" 200 -
+2025-04-01 19:21:34,398 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:21:34] "GET /_reload-hash HTTP/1.1" 200 -
+2025-04-01 19:22:34,108 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:22:34] "GET /_reload-hash HTTP/1.1" 200 -
+2025-04-01 19:23:34,209 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:23:34] "GET /_reload-hash HTTP/1.1" 200 -
+2025-04-01 19:24:37,373 - app - INFO - Loading World Cup data...
+2025-04-01 19:24:37,853 - app - INFO - Successfully loaded data. Finals shape: (22, 9), Nations shape: (13, 7)
+2025-04-01 19:24:37,855 - app - INFO - Starting the Dash application...
+2025-04-01 19:24:37,855 - dash.dash - INFO - Dash is running on http://0.0.0.0:8050/
+
+2025-04-01 19:24:37,891 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8050
+ * Running on http://10.0.0.7:8050
+2025-04-01 19:24:37,891 - werkzeug - INFO - [33mPress CTRL+C to quit[0m

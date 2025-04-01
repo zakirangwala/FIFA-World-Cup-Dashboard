@@ -6,7 +6,7 @@
 # --------------------------------------------------
 
 # import libraries
-from .scraper import get_world_cup_data
+from scraper import get_world_cup_data
 import dash
 from dash import html, dcc
 import plotly.express as px
