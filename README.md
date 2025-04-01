@@ -6,6 +6,9 @@ An interactive dashboard visualizing FIFA World Cup winners and runner-ups from 
 
 The dashboard is deployed and accessible at: [FIFA World Cup Dashboard](https://fifa-world-cup-dashboard-production.up.railway.app/)
 
+![image](https://github.com/user-attachments/assets/0b814eea-b68a-471a-8c41-28d3c84e9b40)
+
+
 ## Features
 
 - **Interactive World Map**: Choropleth visualization showing World Cup final appearances
