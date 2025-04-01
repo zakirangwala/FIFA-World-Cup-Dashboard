@@ -300,3 +300,15 @@
  * Running on http://127.0.0.1:8050
  * Running on http://10.0.0.7:8050
 2025-04-01 19:24:37,891 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-01 19:30:04,019 - app - INFO - Loading World Cup data...
+2025-04-01 19:30:04,368 - app - ERROR - Error loading data: Cannot save file into a non-existent directory: 'data'
+2025-04-01 19:31:00,162 - app - INFO - Loading World Cup data...
+2025-04-01 19:31:00,704 - app - INFO - Successfully loaded data. Finals shape: (22, 9), Nations shape: (13, 7)
+2025-04-01 19:31:00,707 - app - INFO - Starting the Dash application...
+2025-04-01 19:31:00,708 - dash.dash - INFO - Dash is running on http://0.0.0.0:8050/
+
+2025-04-01 19:31:00,780 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8050
+ * Running on http://10.0.0.7:8050
+2025-04-01 19:31:00,780 - werkzeug - INFO - [33mPress CTRL+C to quit[0m

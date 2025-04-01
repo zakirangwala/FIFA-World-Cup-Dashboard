@@ -206,9 +206,9 @@ def get_world_cup_data():
     logger.info("\nNation DF:\n%s", nation_df.to_string())
 
     # write the dataframes to csv
-    finals_df.to_csv('data/world_cup_finals.csv', index=False)
-    nation_df.to_csv('data/world_country_stats.csv', index=False)
-    logger.info("Dataframes written to csv")
+    # finals_df.to_csv('data/world_cup_finals.csv', index=False)
+    # nation_df.to_csv('data/world_country_stats.csv', index=False)
+    # logger.info("Dataframes written to csv")
 
     # Return the processed DataFrames
     return finals_df, nation_df
