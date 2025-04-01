@@ -2,6 +2,10 @@
 
 An interactive dashboard visualizing FIFA World Cup winners and runner-ups from 1930 to 2022. Built with Dash, Plotly, and Python.
 
+## Live Demo
+
+The dashboard is deployed and accessible at: [FIFA World Cup Dashboard](https://fifa-world-cup-dashboard-production.up.railway.app/)
+
 ## Features
 
 - **Interactive World Map**: Choropleth visualization showing World Cup final appearances

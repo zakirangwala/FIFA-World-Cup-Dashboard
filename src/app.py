@@ -5,6 +5,8 @@
 # Version: 2025-04-01
 # --------------------------------------------------
 
+## Deployment URL : https://fifa-world-cup-dashboard-production.up.railway.app/
+
 # import libraries
 from scraper import get_world_cup_data
 import dash
