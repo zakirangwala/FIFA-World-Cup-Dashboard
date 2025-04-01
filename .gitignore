@@ -1,0 +1,10 @@
+.cursor/
+.vscode/
+.idea/
+.DS_Store
+.env
+.env.local
+env/
+action_plan.md
+spec.md
+**/__pycache__/**
