@@ -241,3 +241,49 @@
 2025-04-01 19:13:35,087 - app - INFO - Map updated successfully
 2025-04-01 19:13:43,608 - app - INFO - Updating map with country: None, year: None
 2025-04-01 19:13:43,852 - app - INFO - Map updated successfully
+2025-04-01 19:19:30,003 - app - INFO - Loading World Cup data...
+2025-04-01 19:19:30,427 - app - INFO - Successfully loaded data. Finals shape: (22, 9), Nations shape: (13, 7)
+2025-04-01 19:19:30,429 - app - INFO - Starting the Dash application...
+2025-04-01 19:19:30,430 - dash.dash - INFO - Dash is running on http://0.0.0.0:8050/
+
+2025-04-01 19:19:30,451 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8050
+ * Running on http://10.0.0.7:8050
+2025-04-01 19:19:30,451 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-01 19:19:34,385 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:34] "GET /_reload-hash HTTP/1.1" 200 -
+2025-04-01 19:19:34,597 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:34] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-04-01 19:19:34,605 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:34] "GET /_dash-layout HTTP/1.1" 200 -
+2025-04-01 19:19:34,727 - app - INFO - Updating map with country: None, year: None
+2025-04-01 19:19:34,729 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-01 19:19:34,741 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-01 19:19:35,182 - app - INFO - Map updated successfully
+2025-04-01 19:19:35,182 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-01 19:19:35,248 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:35] "GET /_reload-hash HTTP/1.1" 200 -
+2025-04-01 19:19:37,941 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:37] "GET / HTTP/1.1" 200 -
+2025-04-01 19:19:38,075 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:38] "GET /_reload-hash HTTP/1.1" 200 -
+2025-04-01 19:19:38,611 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:38] "GET /_dash-component-suites/dash/deps/prop-types@15.v2_14_2m1743542631.8.1.min.js HTTP/1.1" 200 -
+2025-04-01 19:19:38,612 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:38] "GET /_dash-component-suites/dash/deps/react@16.v2_14_2m1743542631.14.0.min.js HTTP/1.1" 200 -
+2025-04-01 19:19:38,613 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:38] "GET /_dash-component-suites/dash/deps/react-dom@16.v2_14_2m1743542631.14.0.min.js HTTP/1.1" 200 -
+2025-04-01 19:19:38,614 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:38] "GET /_dash-component-suites/dash/dash-renderer/build/dash_renderer.v2_14_2m1743542631.min.js HTTP/1.1" 200 -
+2025-04-01 19:19:39,120 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:39] "GET /_dash-layout HTTP/1.1" 200 -
+2025-04-01 19:19:39,154 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:39] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-04-01 19:19:39,157 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:39] "GET /_favicon.ico?v=2.14.2 HTTP/1.1" 200 -
+2025-04-01 19:19:39,468 - app - INFO - Updating map with country: None, year: None
+2025-04-01 19:19:39,501 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-01 19:19:39,531 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-01 19:19:39,616 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:39] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-04-01 19:19:39,617 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:39] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-04-01 19:19:39,621 - app - INFO - Map updated successfully
+2025-04-01 19:19:39,624 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-01 19:19:39,655 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:39] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-04-01 19:19:50,530 - app - INFO - Updating map with country: Germany, year: None
+2025-04-01 19:19:50,537 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-01 19:19:50,543 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-01 19:19:50,607 - app - INFO - Map updated successfully
+2025-04-01 19:19:50,607 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-01 19:19:51,453 - app - INFO - Updating map with country: Germany, year: 1938
+2025-04-01 19:19:51,456 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-01 19:19:51,487 - app - INFO - Map updated successfully
+2025-04-01 19:19:51,487 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:19:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-01 19:20:34,260 - werkzeug - INFO - 127.0.0.1 - - [01/Apr/2025 19:20:34] "GET /_reload-hash HTTP/1.1" 200 -

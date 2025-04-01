@@ -6,7 +6,7 @@
 # --------------------------------------------------
 
 # import libraries
-from scraper import get_world_cup_data
+from .scraper import get_world_cup_data
 import dash
 from dash import html, dcc
 import plotly.express as px
@@ -14,14 +14,18 @@ import pandas as pd
 import numpy as np
 import logging
 import os
+import sys
 
-# configure logging
+# Configure logging before importing scraper
+log_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'logs')
+os.makedirs(log_dir, exist_ok=True)
+
 logging.basicConfig(
     level=logging.WARNING,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('logs/app.log'),
-        logging.StreamHandler()
+        logging.FileHandler(os.path.join(log_dir, 'app.log')),
+        logging.StreamHandler(sys.stdout)
     ]
 )
 
