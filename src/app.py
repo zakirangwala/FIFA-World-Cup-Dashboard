@@ -76,7 +76,8 @@ app.layout = html.Div([
     # Statistics Panel
     html.Div([
         html.H3('Statistics', style={'color': '#2c3e50'}),
-        html.Div(id='stats-panel')
+        html.Div(id='stats-panel',
+                 style={'display': 'flex', 'flexWrap': 'wrap', 'gap': '20px'})
     ], style={'marginTop': '20px', 'padding': '20px', 'border': '1px solid #ddd', 'borderRadius': '5px'})
 ])
 
@@ -100,24 +101,48 @@ def update_map(selected_country, selected_year):
         if selected_year:
             year_data = finals_df[finals_df['Year'] == selected_year]
             map_data = map_data[map_data['Country'].isin(
-                [year_data['Winner'].iloc[0], year_data['Runner-up'].iloc[0]])]
+                [year_data['Winners'].iloc[0], year_data['Runners-up'].iloc[0]])]
+
+        # Create hover text with both wins and runner-up appearances
+        map_data['hover_text'] = map_data.apply(
+            lambda row: f"Country: {row['Country']}<br>" +
+            f"World Cup Wins: {row['Wins']}<br>" +
+            f"Runner-up Appearances: {row['RunnerUps']}<br>" +
+            f"Total Finals: {row['TotalFinals']}",
+            axis=1
+        )
 
         fig = px.choropleth(
             map_data,
             locations='Country',
             locationmode='country names',
-            color='Wins',
+            color='TotalFinals',
             color_continuous_scale='Viridis',
-            scope='world'
+            scope='world',
+            hover_name='Country',
+            custom_data=['Wins', 'RunnerUps', 'TotalFinals']
         )
 
         fig.update_layout(
-            title='World Cup Winners by Country',
+            title='World Cup Final Appearances by Country',
             geo=dict(
                 showframe=False,
                 showcoastlines=True,
                 projection_type='equirectangular'
+            ),
+            coloraxis_colorbar=dict(
+                title='Total Finals Appearances',
+                ticksuffix=''
             )
+        )
+
+        # Update hover template to show country first and avoid duplicates
+        fig.update_traces(
+            hovertemplate="<b>%{hovertext}</b><br><br>" +
+            "World Cup Wins: %{customdata[0]}<br>" +
+            "Runner-up Appearances: %{customdata[1]}<br>" +
+            "Total Finals: %{customdata[2]}" +
+            "<extra></extra>"
         )
 
         logger.info("Map updated successfully")
@@ -134,6 +159,78 @@ def update_map(selected_country, selected_year):
             scope='world'
         )
         return fig
+
+
+@app.callback(
+    dash.Output('stats-panel', 'children'),
+    dash.Input('country-dropdown', 'value'),
+    dash.Input('year-dropdown', 'value')
+)
+def update_stats(selected_country, selected_year):
+    try:
+        if not selected_country and not selected_year:
+            return html.Div("Select a country or year to view statistics")
+
+        stats_components = []
+
+        if selected_country:
+            country_stats = nation_df[nation_df['Country']
+                                      == selected_country].iloc[0]
+
+            # Create country statistics cards
+            stats_components.extend([
+                html.Div([
+                    html.H4(f"{selected_country} Statistics",
+                            style={'color': '#2c3e50'}),
+                    html.Div([
+                        html.P(f"Total World Cup Wins: {country_stats['Wins']}",
+                               style={'fontSize': '1.2em', 'color': '#27ae60'}),
+                        html.P(f"Runner-up Appearances: {country_stats['RunnerUps']}",
+                               style={'fontSize': '1.2em', 'color': '#e74c3c'}),
+                        html.P(f"Total Finals Appearances: {country_stats['TotalFinals']}",
+                               style={'fontSize': '1.2em', 'color': '#3498db'}),
+                        html.P("Years Won: " + ", ".join(map(str, country_stats['YearsWon'])) if country_stats['YearsWon'] else "No wins yet",
+                               style={'fontSize': '1.2em'}),
+                        html.P("Runner-up Years: " + ", ".join(map(str, country_stats['YearsRunnerUp'])) if country_stats['YearsRunnerUp'] else "No runner-up appearances",
+                               style={'fontSize': '1.2em'})
+                    ])
+                ], style={'flex': '1', 'minWidth': '300px', 'padding': '15px',
+                          'backgroundColor': '#f8f9fa', 'borderRadius': '5px'})
+            ])
+
+        if selected_year:
+            year_data = finals_df[finals_df['Year'] == selected_year].iloc[0]
+
+            # Create year statistics card
+            stats_components.append(
+                html.Div([
+                    html.H4(f"{selected_year} World Cup Final",
+                            style={'color': '#2c3e50'}),
+                    html.Div([
+                        html.P(f"Winner: {year_data['Winners']}",
+                               style={'fontSize': '1.2em', 'color': '#27ae60'}),
+                        html.P(f"Runner-up: {year_data['Runners-up']}",
+                               style={'fontSize': '1.2em', 'color': '#e74c3c'}),
+                        html.P(f"Score: {year_data['CleanedScore']}",
+                               style={'fontSize': '1.2em', 'fontWeight': 'bold'}),
+                        html.P(f"Venue: {year_data['Venue']}",
+                               style={'fontSize': '1.2em'}),
+                        html.P(f"Location: {year_data['Location']}",
+                               style={'fontSize': '1.2em'}),
+                        html.P(f"Attendance: {int(year_data['Attendance']):,}",
+                               style={'fontSize': '1.2em'}),
+                        html.P(f"Notes: {year_data['Notes'] if year_data['Notes'] else 'None'}",
+                               style={'fontSize': '1.2em'})
+                    ])
+                ], style={'flex': '1', 'minWidth': '300px', 'padding': '15px',
+                          'backgroundColor': '#f8f9fa', 'borderRadius': '5px'})
+            )
+
+        return stats_components
+
+    except Exception as e:
+        logger.error(f"Error updating statistics: {str(e)}")
+        return html.Div("Error loading statistics")
 
 
 if __name__ == '__main__':

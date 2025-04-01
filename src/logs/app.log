@@ -6,3 +6,54 @@
 2025-04-01 18:50:54,991 - app - INFO - Loading World Cup data...
 2025-04-01 18:50:55,329 - app - INFO - Successfully loaded data. Finals shape: (22, 9), Nations shape: (13, 7)
 2025-04-01 18:50:55,330 - app - INFO - Starting the Dash application...
+2025-04-01 18:55:46,087 - app - INFO - Loading World Cup data...
+2025-04-01 18:55:46,481 - app - INFO - Successfully loaded data. Finals shape: (22, 9), Nations shape: (13, 7)
+2025-04-01 18:55:46,483 - app - INFO - Starting the Dash application...
+2025-04-01 18:55:46,484 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-01 18:55:47,022 - app - INFO - Loading World Cup data...
+2025-04-01 18:55:47,363 - app - INFO - Successfully loaded data. Finals shape: (22, 9), Nations shape: (13, 7)
+2025-04-01 18:55:47,364 - app - INFO - Starting the Dash application...
+2025-04-01 18:56:01,814 - app - INFO - Updating map with country: None, year: None
+2025-04-01 18:56:02,691 - app - INFO - Map updated successfully
+2025-04-01 18:56:46,579 - app - INFO - Updating map with country: Italy, year: None
+2025-04-01 18:56:46,693 - app - INFO - Map updated successfully
+2025-04-01 18:56:48,715 - app - INFO - Updating map with country: Italy, year: 1938
+2025-04-01 18:56:48,718 - app - ERROR - Error updating map: 'Winner'
+2025-04-01 18:56:52,527 - app - INFO - Updating map with country: Italy, year: 1954
+2025-04-01 18:56:52,532 - app - ERROR - Error updating map: 'Winner'
+2025-04-01 18:57:01,234 - app - INFO - Updating map with country: France, year: 1954
+2025-04-01 18:57:01,249 - app - ERROR - Error updating map: 'Winner'
+2025-04-01 18:57:07,717 - app - INFO - Updating map with country: France, year: None
+2025-04-01 18:57:07,780 - app - INFO - Map updated successfully
+2025-04-01 18:57:11,074 - app - INFO - Updating map with country: France, year: 2022
+2025-04-01 18:57:11,079 - app - ERROR - Error updating map: 'Winner'
+2025-04-01 18:57:53,719 - app - INFO - Updating map with country: None, year: 2022
+2025-04-01 18:57:53,735 - app - ERROR - Error updating map: 'Winner'
+2025-04-01 18:57:54,604 - app - INFO - Updating map with country: None, year: None
+2025-04-01 18:57:54,630 - app - INFO - Map updated successfully
+2025-04-01 18:59:06,166 - app - INFO - Loading World Cup data...
+2025-04-01 18:59:06,558 - app - INFO - Successfully loaded data. Finals shape: (22, 9), Nations shape: (13, 7)
+2025-04-01 18:59:06,559 - app - INFO - Starting the Dash application...
+2025-04-01 18:59:07,690 - app - INFO - Updating map with country: None, year: None
+2025-04-01 18:59:08,214 - app - INFO - Map updated successfully
+2025-04-01 19:00:27,699 - app - INFO - Loading World Cup data...
+2025-04-01 19:00:28,052 - app - INFO - Successfully loaded data. Finals shape: (22, 9), Nations shape: (13, 7)
+2025-04-01 19:00:28,054 - app - INFO - Starting the Dash application...
+2025-04-01 19:00:28,470 - app - INFO - Updating map with country: None, year: None
+2025-04-01 19:00:28,851 - app - INFO - Map updated successfully
+2025-04-01 19:01:53,488 - app - INFO - Loading World Cup data...
+2025-04-01 19:01:53,949 - app - INFO - Successfully loaded data. Finals shape: (22, 9), Nations shape: (13, 7)
+2025-04-01 19:01:53,950 - app - INFO - Starting the Dash application...
+2025-04-01 19:01:54,266 - app - INFO - Updating map with country: None, year: None
+2025-04-01 19:01:54,720 - app - INFO - Map updated successfully
+2025-04-01 19:02:15,363 - app - INFO - Loading World Cup data...
+2025-04-01 19:02:15,788 - app - INFO - Successfully loaded data. Finals shape: (22, 9), Nations shape: (13, 7)
+2025-04-01 19:02:15,791 - app - INFO - Starting the Dash application...
+2025-04-01 19:02:16,368 - app - INFO - Updating map with country: None, year: None
+2025-04-01 19:02:16,639 - app - INFO - Map updated successfully
+2025-04-01 19:02:53,777 - app - INFO - Loading World Cup data...
+2025-04-01 19:02:54,099 - app - INFO - Successfully loaded data. Finals shape: (22, 9), Nations shape: (13, 7)
+2025-04-01 19:02:54,101 - app - INFO - Starting the Dash application...
+2025-04-01 19:02:55,557 - app - INFO - Updating map with country: None, year: None
+2025-04-01 19:02:56,132 - app - INFO - Map updated successfully
